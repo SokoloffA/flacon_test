@@ -39,7 +39,6 @@ jobs:
         [[ "${GITHUB_REF_TYPE}" != "tag" ]] && echo ARTIFACT_NAME="Flacon-$(date +%Y.%m.%d_%H.%M.%S).app" >> ${GITHUB_ENV}
         grep "ARTIFACT_NAME" ${GITHUB_ENV}
 
-
         [[ "${GITHUB_REF_TYPE}"  = "tag" ]] && echo TAR_NAME="Flacon-${GITHUB_REF_NAME:1}.tar" >> ${GITHUB_ENV}
         [[ "${GITHUB_REF_TYPE}" != "tag" ]] && echo TAR_NAME="Flacon-$(date +%Y.%m.%d_%H.%M.%S).tar" >> ${GITHUB_ENV}
         grep "TAR_NAME" ${GITHUB_ENV}
